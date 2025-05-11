@@ -1,39 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Age Calculator</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Age Calculator</title>
 
-    <!-- SEO: Meta Tags for Search Engines -->
-    <meta name="description" content="Use our free Online Age Calculator to find your exact age in years, months, days, and even seconds.">
-    <meta name="keywords" content="online age calculator, birthday calculator, age in seconds, calculate age, age finder, age stats">
-    <meta name="author" content="Ismail Ibrahim Mensah">
-    <meta name="robots" content="index, follow">
+  <!-- ✅ SEO Meta Tags -->
+  <meta name="description" content="Use our free Online Age Calculator to find your exact age in years, months, days, and even seconds." />
+  <meta name="keywords" content="online age calculator, birthday calculator, age in seconds, calculate age, age finder, age stats" />
+  <meta name="author" content="Ismail Ibrahim Mensah" />
+  <meta name="robots" content="index, follow" />
 
-    <!-- SEO: Open Graph (for Facebook, LinkedIn, etc.) -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Online Age Calculator">
-    <meta property="og:description" content="Discover your age instantly in years, months, and days. Share it easily with friends!">
-    <meta property="og:image" content="https://age-calculator-zeta-tawny.vercel.app/image.png">
-    <meta property="og:url" content="https://age-calculator-zeta-tawny.vercel.app/">
+  <!-- ✅ Open Graph (Facebook, LinkedIn) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Online Age Calculator" />
+  <meta property="og:description" content="Discover your age instantly in years, months, and days. Share it easily with friends!" />
+  <meta property="og:image" content="https://age-calculator-zeta-tawny.vercel.app/icons/icon-512.png" />
+  <meta property="og:url" content="https://age-calculator-zeta-tawny.vercel.app/" />
 
-    <!-- SEO: Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Online Age Calculator">
-    <meta name="twitter:description" content="Find your age quickly with our free Online Age Calculator. Accurate and fun!">
-    <meta name="twitter:image" content="https://age-calculator-zeta-tawny.vercel.app/.png">
-    
-  <!-- ✅ Web App Manifest for PWA -->
-  <link rel="manifest" href="/locales/manifest.json">
-  <meta name="theme-color" content="#4CAF50">
+  <!-- ✅ Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Online Age Calculator" />
+  <meta name="twitter:description" content="Find your age quickly with our free Online Age Calculator. Accurate and fun!" />
+  <meta name="twitter:image" content="https://age-calculator-zeta-tawny.vercel.app/icons/icon-512.png" />
 
-  <!-- ✅ Favicon -->
-  <link rel="icon" href="icons/icon-192.png" type="image/png">
+  <!-- ✅ Web App Manifest (PWA) -->
+  <link rel="manifest" href="/locales/manifest.json" />
+  <meta name="theme-color" content="#4CAF50" />
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="css/style.css">
+  <!-- ✅ Favicon and App Icons -->
+  <link rel="icon" href="icons/icon-192.png" type="image/png" />
+  <link rel="apple-touch-icon" href="icons/icon-512.png" />
+
+  <!-- ✅ Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
   <div class="container">
     <h1>Age Calculator</h1>
@@ -92,7 +94,7 @@
     </div>
   </div>
 
-  <!-- Scripts -->
+  <!-- ✅ Scripts -->
   <script src="js/i18n.js"></script>
   <script src="js/date-utils.js"></script>
   <script src="js/zodiac.js"></script>
@@ -103,9 +105,9 @@
   <!-- ✅ Register Service Worker -->
   <script>
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('js/service-worker.js')
-        .then(reg => console.log('Service Worker registered ✅'))
-        .catch(err => console.error('Service Worker registration failed ❌', err));
+      navigator.serviceWorker.register('/js/service-worker.js')
+        .then(reg => console.log('✅ Service Worker registered:', reg.scope))
+        .catch(err => console.error('❌ Service Worker registration failed:', err));
     }
   </script>
 </body>
